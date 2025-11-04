@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Coding Test - Array Sum</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 40px auto;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 14px;
+      border-radius: 8px;
+      padding: 10px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border: none;
+      background: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    pre {
+      background: #eee;
+      padding: 10px;
+      border-radius: 8px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>🧠 JavaScript Coding Challenge: Array Sum</h2>
+    <p>
+      Write a function that takes an array of integers and returns the sum of all elements 
+      <b>without using built-in methods like reduce()</b>.
+    </p>
+    <p><b>Example:</b> Input: [5,10,15,20] → Output: 50</p>
+
+    <textarea id="code">
+function arraySum(arr) {
+  // Write your code here
+}
+console.log(arraySum([5,10,15,20]));
+    </textarea>
+
+    <button onclick="runCode()">Run Test</button>
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+  </div>
+
+  <script>
+    function runCode() {
+      const code = document.getElementById('code').value;
+      try {
+        const result = eval(code);
+        document.getElementById('output').innerText = result !== undefined ? result : '✅ Check console output!';
+      } catch (e) {
+        document.getElementById('output').innerText = '❌ Error: ' + e.message;
+      }
+    }
+  </script>
+</body>
+</html>
